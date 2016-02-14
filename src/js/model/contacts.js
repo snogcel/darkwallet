@@ -11,8 +11,7 @@ function Contacts(store, identity) {
   this.store = store;
   this.identity = identity
   this._contacts = this.store.init('contacts', [
-    { name: 'DarkWallet team', address: '31oSGBBNrpCiENH3XMZpiP6GTC4tad4bMy' },
-    { name: 'libbitcoin team', address: '339Bsc4f6jeh4k15difzbr4TTfoeS9uEKP' }
+    { name: 'Random Dash Address', address: 'XqHt831rFj5tr4PVjqEcJmh6VKvHP62QiM' }
   ]);
   this.validAddresses = [
       identity.wallet.versions.address,

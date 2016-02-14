@@ -15,7 +15,6 @@ define(['./module', 'darkwallet'], function (providers, DarkWallet) {
 
   WalletProvider.prototype.loadAddresses = function(identity) {
       var self = this;
-
       /* Load addresses into angular */
       Object.keys(identity.wallet.pubKeys).forEach(function(pubKeyIndex) {
           var walletAddress = identity.wallet.getAddress(pubKeyIndex);

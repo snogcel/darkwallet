@@ -11,7 +11,7 @@ function(Stealth, Bitcoin, MultisigFunds, Pockets, BtcUtils, Output) {
 function Wallet(store, identity) {
     this.identity = identity;
     this.store = store;
-    this.network = store.init('network', 'bitcoin');
+    this.network = store.init('network', 'dash');
     this.initVersions(this.network);
     this.fee = store.init('fee', Bitcoin.networks[this.network].feePerKb); // 0.1 mBTC
     this.pubKeys = store.init('pubkeys', {});
@@ -50,6 +50,9 @@ Wallet.prototype.initVersions = function(network) {
             break;
         case 'testnet':
             this.versions.stealth = {address: Stealth.testnet, nonce: Stealth.nonceVersion, prefix: 'w'};
+            break;
+        case 'dash':
+            this.versions.stealth = {address: Stealth.version, nonce: Stealth.nonceVersion, prefix: 'X'};
             break;
     }
 };

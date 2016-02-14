@@ -16,7 +16,7 @@ define(['./module', 'darkwallet', 'mnemonicjs', 'available_languages'], function
   $scope.languages = AvailableLanguages;
   $scope.form = {
     create_or_restore: 'create',
-    network: 'bitcoin',
+    network: 'dash',
     language: AvailableLanguages.preferedLanguage()
   };
 
